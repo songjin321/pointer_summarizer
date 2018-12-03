@@ -43,7 +43,7 @@ def preprocess_sentence(w):
     return w
 
 def chunk_file(set_name):
-  in_file = 'finished_files/%s.bin' % set_name
+  in_file = '../pointer_bert/finished_files/%s.bin' % set_name
   reader = open(in_file, "rb")
   chunk = 0
   finished = False

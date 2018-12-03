@@ -3,11 +3,11 @@ import os
 root_dir = os.path.expanduser("~")
 
 #train_data_path = os.path.join(root_dir, "ptr_nw/cnn-dailymail-master/finished_files/train.bin")
-train_data_path = os.path.join(root_dir, "/app/pointer_bert/finished_files/chunked/train_*")
-eval_data_path = os.path.join(root_dir, "/app/pointer_bert/finished_files/val.bin")
-decode_data_path = os.path.join(root_dir, "/app/pointer_bert/finished_files/test.bin")
-vocab_path = os.path.join(root_dir, "/app/pointer_bert/finished_files/vocab")
-log_root = os.path.join(root_dir, "/app/log")
+train_data_path = os.path.join(root_dir, "../pointer_bert/finished_files/chunked/train_*")
+eval_data_path = os.path.join(root_dir, "../pointer_bert/finished_files/val.bin")
+decode_data_path = os.path.join(root_dir, "../pointer_bert/finished_files/test.bin")
+vocab_path = os.path.join(root_dir, "../pointer_bert/finished_files/vocab")
+log_root = os.path.join(root_dir, "../log")
 
 # Hyperparameters
 hidden_dim= 256
