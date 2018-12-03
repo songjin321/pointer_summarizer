@@ -85,8 +85,8 @@ if __name__ == '__main__':
             lines = f.readlines()
             for idx, line in enumerate(lines):
                 print "Writing story %i of %i; %.2f percent done" % (idx, len(lines), float(idx)*100.0/float(len(lines)))
-                article = preprocess_sentence(json.loads(line)['content'])
-                abstract = preprocess_sentence(json.loads(line)['title'])
+                article = preprocess_sentence(json.loads(line)['content']).encode("utf8")
+                abstract = preprocess_sentence(json.loads(line)['title']).encode("utf8")
                 abstract = SENTENCE_START+abstract+SENTENCE_END
                 # Write to tf.Example
                 tf_example = example_pb2.Example()
@@ -106,8 +106,8 @@ if __name__ == '__main__':
             lines = f.readlines()
             for idx, line in enumerate(lines):
                 print "Writing story %i of %i; %.2f percent done" % (idx, len(lines), float(idx)*100.0/float(len(lines)))
-                article = preprocess_sentence(json.loads(line)['content'])
-                abstract = preprocess_sentence(json.loads(line)['title'])
+                article = preprocess_sentence(json.loads(line)['content']).encode("utf8")
+                abstract = preprocess_sentence(json.loads(line)['title']).encode("utf8")
                 abstract = SENTENCE_START+abstract+SENTENCE_END
                 # Write to tf.Example
                 tf_example = example_pb2.Example()
@@ -130,8 +130,8 @@ if __name__ == '__main__':
                 lines = f.readlines()
                 for idx, line in enumerate(lines):
                   print "Writing story %i of %i; %.2f percent done" % (idx, len(lines), float(idx)*100.0/float(len(lines)))
-                  article = preprocess_sentence(json.loads(line)['content'])
-                  abstract = preprocess_sentence(json.loads(line)['title'])
+                  article = preprocess_sentence(json.loads(line)['content']).encode("utf8")
+                  abstract = preprocess_sentence(json.loads(line)['title']).encode("utf8")
                   abstract = SENTENCE_START+abstract+SENTENCE_END
                   # Write to tf.Example
                   tf_example = example_pb2.Example()
